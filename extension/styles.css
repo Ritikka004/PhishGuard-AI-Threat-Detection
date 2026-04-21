@@ -1,0 +1,162 @@
+body {
+    width: 320px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0a0e17;
+    color: #e2e8f0;
+}
+
+.container {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.header {
+    text-align: center;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 12px;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #3b82f6;
+}
+
+.header p {
+    margin: 4px 0 0;
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.url-box {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    word-break: break-all;
+    max-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.scan-btn {
+    width: 100%;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 8px;
+    transition: background-color 0.2s;
+}
+
+.scan-btn:hover {
+    background-color: #2563eb;
+}
+
+.scan-btn:disabled {
+    background-color: #334155;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#loading {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid #334155;
+    border-top: 3px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 8px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#result-container {
+    margin-top: 16px;
+    background-color: #121826;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #1e293b;
+    text-align: center;
+}
+
+.risk-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.safe {
+    background-color: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    border: 1px solid #10b981;
+}
+
+.suspicious {
+    background-color: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+    border: 1px solid #f59e0b;
+}
+
+.dangerous {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border: 1px solid #ef4444;
+}
+
+.reasons {
+    text-align: left;
+    margin-top: 12px;
+    border-top: 1px solid #1e293b;
+    padding-top: 12px;
+}
+
+.reasons h4 {
+    margin: 0 0 8px 0;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+.reasons ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 12px;
+    color: #cbd5e1;
+}
+
+.reasons li {
+    margin-bottom: 4px;
+}
+
+.error-container {
+    margin-top: 16px;
+    padding: 8px;
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border: 1px solid #ef4444;
+    border-radius: 6px;
+    font-size: 12px;
+}
