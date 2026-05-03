@@ -24,13 +24,13 @@ const Dashboard = () => {
 
   const fetchData = async () => {
     try {
-      const statsRes = await fetch('http://localhost:5000/api/stats')
+      const statsRes = await fetch('https://phishguard-backend-f425.onrender.com/api/stats')
       if(statsRes.ok) {
         const statsData = await statsRes.json()
         setStats(statsData)
       }
       
-      const historyRes = await fetch('http://localhost:5000/api/history?limit=5')
+      const historyRes = await fetch('https://phishguard-backend-f425.onrender.com/api/history?limit=5')
       if(historyRes.ok) {
         const historyData = await historyRes.json()
         setRecentScans(historyData)

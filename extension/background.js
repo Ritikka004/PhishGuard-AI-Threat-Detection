@@ -5,7 +5,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
         console.log("PhishGuard Auto-Scan triggered for URL:", tab.url);
         
         // Call backend API
-        fetch('http://127.0.0.1:5000/api/scan-url', {
+        fetch('https://phishguard-backend-f425.onrender.com/api/scan-url', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -16,7 +16,7 @@ const EmailAnalyzer = () => {
     setError(null)
     
     try {
-      const res = await fetch('http://localhost:5000/api/scan-email', {
+      const res = await fetch('https://phishguard-backend-f425.onrender.com/api/scan-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

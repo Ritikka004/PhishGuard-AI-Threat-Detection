@@ -13,7 +13,7 @@ const ScanHistory = () => {
 
   const fetchHistory = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/history?limit=100')
+      const res = await fetch('https://phishguard-backend-f425.onrender.com/api/history?limit=100')
       if (res.ok) {
         const data = await res.json()
         setHistory(data)

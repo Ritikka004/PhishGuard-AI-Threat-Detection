@@ -16,7 +16,7 @@ const URLScanner = () => {
     setError(null)
     
     try {
-      const res = await fetch('http://localhost:5000/api/scan-url', {
+      const res = await fetch('https://phishguard-backend-f425.onrender.com/api/scan-url', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ url })

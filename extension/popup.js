@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         loadingDiv.classList.remove('hidden');
 
         try {
-            const res = await fetch('http://127.0.0.1:5000/api/scan-url', {
+            const res = await fetch('https://phishguard-backend-f425.onrender.com/api/scan-url', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
